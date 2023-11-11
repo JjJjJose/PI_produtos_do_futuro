@@ -16,7 +16,7 @@ Por enquanto, o projeto é um projeto escolar fechado para o nosso grupo, e não
 
 ## Sobre Nós
 
-O projeto "Produtos do Futuro" foi concebido por um grupo de estudantes do curso de Tecnologia em Análise e Desenvolvimento de Sistemas da UniOpet, incluindo Paulo Eduardo, João Gualberto, João Trizotte e José Augusto.
+O projeto "Produtos do Futuro" foi concebido por um grupo de estudantes do curso de Tecnologia em Análise e Desenvolvimento de Sistemas da UniOpet, incluindo João Trizotte e José Augusto.
 
 ---
 
