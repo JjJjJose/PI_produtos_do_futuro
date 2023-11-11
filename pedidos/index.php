@@ -48,7 +48,3 @@
     </div>
 </body>
 </html>
-
-<?php 
- include "./util/config.php"
-?>
