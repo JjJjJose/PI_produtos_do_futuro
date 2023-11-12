@@ -46,7 +46,7 @@
 
     p.talentos {
         margin-bottom;
-        : 1px
+     
     }
 
     .img:hover {
