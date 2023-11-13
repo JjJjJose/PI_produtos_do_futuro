@@ -256,7 +256,7 @@ if (isset($_POST['gravar'])) {
     if ($_UP['tamanho'] <= $_FILES['image']['size']) {
         echo '<script type="text/javascript">';
         echo 'window.alert("Tamanho incompativel\n Use no maximo 2MB");';
-       echo '</script>';
+        echo '</script>';
     }
     if ($_UP['renomear'] === true) {
         $nome_final = md5(time()) . ".$extensao";
