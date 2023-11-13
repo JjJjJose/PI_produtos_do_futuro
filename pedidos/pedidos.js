@@ -22,7 +22,7 @@ imageUpload.addEventListener('change', function () {
     }
 });
 
-        const majorToID = {
+   const majorToID = {
             'Selecione um': 0,
             'Ciência da Computação': 1,
             'Engenharia de Software': 1,

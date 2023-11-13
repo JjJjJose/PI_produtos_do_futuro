@@ -110,10 +110,10 @@ if (isset($_POST['gravar'])) {
     $pw1 = $_POST['password'];
     $pw2 = $_POST['password-2'];
     if ($pw1 !== $pw2) {
-        echo "As senhas devem ser iguais";
+        echo "As senhas precisam ser identicas!";
     } else {
         if (isAlredySaved($_POST['email'])) {
-            echo "Você já possui algo assim";
+            echo "Este email ja está em uso!";
         } else {
 
             $nome = $_POST['name'];

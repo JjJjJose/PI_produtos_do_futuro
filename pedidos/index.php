@@ -18,24 +18,23 @@
     <div class="container bg-secondary">
 
 
-        <form action="">
+        <form action="index.php" method="post" enctype="multipart/form-data">
             <div class="row justify-content-between">
-                <div class="col text-center my-3" style="border: solid 1px red;">
-                    <label for="imageUpload">Escolha uma imagem de exemplo:</label><br />
+                <div class="col text-center my-3">
+                    Escolha uma imagem de exemplo:<br />
                     <input type="file" name="image" id="imageUpload" accept="image/*">
                     <img src="#" alt="Preview" id="preview" style="display: none;">
                 </div>
 
 
-                <div class="col text-center my-3" style="border: solid 1px blue;">
-                    <label for="">
-                        <input type="text" name="" id="tituto" placeholder="Titulo" style="width: 500px; font-weight: bold;" ><br>
-                        <textarea name="" name="" id="descricao" placeholder="Descrição"  style="width: 500px;" rows="3"></textarea>
-                    </label><br><br>
+                <div class="col text-center my-3">
+                    <input type="text" name="titulo" id="title" placeholder="Titulo" style="width: 500px; font-weight: bold;"><br>
+                    <textarea  name="description" id="descricao" placeholder="Descrição" style="width: 500px;" rows="3"></textarea>
+                    <br><br>
 
                     <div class="form-floating mb-2 myRow">
                         <p>Nome do Curso:</p>
-                        <select class="selectpicker" data-live-search="true" id="major">
+                        <select class="selectpicker" data-live-search="true" id="major" name="area">
                             <option>Selecione um</option>
                             <option>Análise e Desenvolvimento de Sistemas</option>
                             <option>Ciência da Computação</option>
@@ -103,7 +102,7 @@
                         </div>
 
                         <div style="display:none" id="ti">
-                            <select class="selectpicker" multiple data-live-search="true" id="select_ti">
+                            <select class="selectpicker" multiple data-live-search="true" id="select_ti" name="subArea">
                                 <option>Programação Front-End</option>
                                 <option>Programação Back-End</option>
                                 <option>Programação Mobile</option>
@@ -115,7 +114,7 @@
 
                         <div style="display:none" id="design">
 
-                            <select class="selectpicker" multiple data-live-search="true" id="select_design">
+                            <select class="selectpicker" multiple data-live-search="true" id="select_design" name="subArea">
                                 <option>Design Gráfico</option>
                                 <option>Design de Interface de Usuário (UI)</option>
                                 <option>Design de Experiência do Usuário (UX)</option>
@@ -132,7 +131,7 @@
 
                         <div style="display:none" id="marketing">
 
-                            <select class="selectpicker" multiple data-live-search="true" id="select_marketing">
+                            <select class="selectpicker" multiple data-live-search="true" id="select_marketing" name="subArea">
                                 <option>Marketing Digital</option>
                                 <option>Marketing de Conteúdo</option>
                                 <option>Publicidade Online</option>
@@ -146,7 +145,7 @@
 
                         <div style="display:none" id="nutricao">
 
-                            <select class="selectpicker" multiple data-live-search="true" id="select_nutricao">
+                            <select class="selectpicker" multiple data-live-search="true" id="select_nutricao" name="subArea">
                                 <option>Nutrição Clínica</option>
                                 <option>Nutrição Esportiva</option>
                                 <option>Nutrição Infantil</option>
@@ -158,9 +157,8 @@
 
 
 
-                        <div style="display:none" id="audiovisuais">
-                            <select style="display:none" id="select_audiovisuais" class="selectpicker" multiple
-                                data-live-search="true">
+                        <div style="display:none" id="audiovisuais" name="subArea">
+                            <select style="display:none" id="select_audiovisuais" class="selectpicker" multiple data-live-search="true">
                                 <option>Produção de Vídeos</option>
                                 <option>Edição de Vídeos</option>
                                 <option>Produção de Áudio</option>
@@ -172,7 +170,7 @@
 
 
                         <div style="display:none" id="publicidade">
-                            <select class="selectpicker" multiple data-live-search="true" id="select_publicidade">
+                            <select class="selectpicker" multiple data-live-search="true" id="select_publicidade" name="subArea">
                                 <option>Publicidade Tradicional</option>
                                 <option>Planejamento de Campanhas</option>
                                 <option>Estratégia de Anúncios</option>
@@ -184,7 +182,7 @@
 
 
                         <div style="display:none" id="jornalismo">
-                            <select class="selectpicker" multiple data-live-search="true" id="select_jornalismo">
+                            <select class="selectpicker" multiple data-live-search="true" id="select_jornalismo" name="subArea">
                                 <option>Jornalismo de Investigação</option>
                                 <option>Jornalismo de Dados</option>
                                 <option>Jornalismo Esportivo</option>
@@ -197,17 +195,18 @@
 
 
                     </div>
-                    
-                    <label for="">Insira um preço:
-                        <input type="number" name="" id="">
-                    </label><br><br>
 
-                    <label for="">Data limite:
-                        <input type="date" name="" id="">
-                    </label><br><br>
+                    Insira um preço:
+                    <input type="number" name="preco" id="Preco">
+                    <br><br>
 
-                    <button type="button" class="btn btn-warning mx-3">Cancelar</button>
-                    <button type="button" class="btn btn-success mx-3">Confirmar</button>
+                    Data limite:
+                    <input type="date" name="data" id="Datas">
+                    <br><br>
+                    <a href="../shopping/shopping.php">
+                        <button type="button" class="btn btn-warning mx-3">Cancelar</button>
+                    </a>
+                    <button type="submit" class="btn btn-success mx-3" value="Cadastrar" name="gravar">Confirmar</button>
                 </div>
             </div>
         </form>
@@ -215,6 +214,70 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="./pedidos.js"></script>
 </body>
+
 </html>
 
-<?php ?>
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+
+include "../config.php";
+if (isset($_POST['gravar'])) {
+
+    $titulo = $_POST['titulo'];
+    $descricao = $_POST['description'];
+    $imagem = $_FILES['image'];
+
+    $area = $_POST['area'];
+    $subArea = $_POST['subArea'];
+    $preco = $_POST['preco'];
+    $data = $_POST['data'];
+
+
+    $_UP['pasta'] = "../assets/";
+    $_UP['tamanho'] = 1024 * 1024 * 2; //2mb
+    $_UP['extensao'] = ['jpg', 'png', 'jpeg', 'gif'];
+    $_UP['renomear'] = true;
+   
+    $explode = explode('.', $_FILES['image']['name']);
+    $aponta = end($explode);
+    $extensao = strtolower($aponta);
+    if (array_search($extensao, $_UP['extensao']) === false) {
+        echo "extensao não aceita";
+    };
+
+    if ($_UP['tamanho'] <= $_FILES['image']['size']) {
+        echo "arquivo muito grande";
+    }
+    if ($_UP['renomear'] === true) {
+        $nome_final = md5(time()) . ".$extensao";
+    } else {
+        $nome_final = $_FILES['']['name'];
+    }
+
+
+
+    if (move_uploaded_file($_FILES['image']['tmp_name'], $_UP['pasta'] . $nome_final)) {
+        $url = $_UP['pasta'] . $nome_final;
+
+        $grava = $conn->prepare('INSERT INTO produtos 
+                (`id_prod`,`titulo`,`descricao`,`url_prod`,`area_prod`,`subArea_prod`,`preco_prod`,`data_prod`) 
+                VALUES (NULL, :titulo, :description, :url_prod, :area, :subArea, :preco, :data_prod )');
+        $grava->bindValue(':titulo', $titulo);
+        $grava->bindValue(':description', $descricao);
+        $grava->bindValue(':url_prod', $url);
+        $grava->bindValue(':area', $area);
+        $grava->bindValue(':subArea', $subArea);
+        $grava->bindValue(':preco', $preco);
+        $grava->bindValue(':data_prod', $data);
+       
+        $grava->execute();
+        $errorInfo = $grava->errorInfo();
+        if ($errorInfo[0] != '00000') {
+            echo "<h1>Erro no banco de dados: " . $errorInfo[2] . "</h1>";
+        }
+    }
+}
+
+?>

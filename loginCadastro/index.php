@@ -44,10 +44,10 @@
 
     }
 
-    p.talentos {
+    /*p.talentos {
         margin-bottom;
      
-    }
+    }*/
 
     .img:hover {
         background-color: rgba(0, 0, 0, 0.5);

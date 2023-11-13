@@ -89,6 +89,18 @@ CREATE TABLE `produto_ti` (
 -- Índices para tabelas despejadas
 --
 
+CREATE TABLE `produtos` (
+  `id_prod` int(11) NOT NULL,
+  `titulo` varchar(100) DEFAULT NULL,
+  `descricao` text DEFAULT NULL,
+  `url_prod` varchar(255) DEFAULT NULL,
+  `area_prod` varchar(255) DEFAULT NULL,
+  `subArea_prod` varchar(255) DEFAULT NULL,
+  `preco_prod` decimal(10,2) DEFAULT NULL,
+  `data_prod` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
 --
 -- Índices de tabela `chat`
 --
@@ -117,6 +129,9 @@ ALTER TABLE `produto_ti`
 -- AUTO_INCREMENT para tabelas despejadas
 --
 
+ALTER TABLE `produtos`
+  ADD PRIMARY KEY (`id_prod`);
+
 --
 -- AUTO_INCREMENT de tabela `chat`
 --
@@ -128,6 +143,9 @@ ALTER TABLE `chat`
 --
 ALTER TABLE `infovendedor`
   MODIFY `id_vend` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  ALTER TABLE `produtos`
+  MODIFY `id_prod` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
 
 --
 -- AUTO_INCREMENT de tabela `login`
@@ -141,6 +159,7 @@ ALTER TABLE `login`
 ALTER TABLE `produto_ti`
   MODIFY `id_prod` int(1) NOT NULL AUTO_INCREMENT COMMENT 'Id increase';
 COMMIT;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
