@@ -29,7 +29,7 @@
 
                 <div class="col text-center my-3">
                     <input type="text" name="titulo" id="title" placeholder="Titulo" style="width: 500px; font-weight: bold;"><br>
-                    <textarea  name="description" id="descricao" placeholder="Descrição" style="width: 500px;" rows="3"></textarea>
+                    <textarea name="description" id="descricao" placeholder="Descrição" style="width: 500px;" rows="3"></textarea>
                     <br><br>
 
                     <div class="form-floating mb-2 myRow">
@@ -224,7 +224,7 @@ ini_set('display_errors', '1');
 if (isset($_POST['id_log'])) {
     header("location: ../loginCadastro/index.php");
     exit();
-}; 
+};
 
 include "../config.php";
 if (isset($_POST['gravar'])) {
@@ -234,25 +234,29 @@ if (isset($_POST['gravar'])) {
     $imagem = $_FILES['image'];
 
     $area = $_POST['area'];
-    $subArea = $_POST['subArea'];
+    @$subArea = $_POST['subArea'];
     $preco = $_POST['preco'];
     $data = $_POST['data'];
 
 
-    $_UP['pasta'] = "../assets/";
+    $_UP['pasta'] = "../arquivosProd/";
     $_UP['tamanho'] = 1024 * 1024 * 2; //2mb
     $_UP['extensao'] = ['jpg', 'png', 'jpeg', 'gif'];
     $_UP['renomear'] = true;
-   
+
     $explode = explode('.', $_FILES['image']['name']);
     $aponta = end($explode);
     $extensao = strtolower($aponta);
     if (array_search($extensao, $_UP['extensao']) === false) {
-        echo "extensao não aceita";
+        echo '<script type="text/javascript">';
+        echo 'window.alert("Extensão não aceita\n Use jpg, png, jpeg ou gif");';
+        echo '</script>';
     };
 
     if ($_UP['tamanho'] <= $_FILES['image']['size']) {
-        echo "arquivo muito grande";
+        echo '<script type="text/javascript">';
+        echo 'window.alert("Tamanho incompativel\n Use no maximo 2MB");';
+       echo '</script>';
     }
     if ($_UP['renomear'] === true) {
         $nome_final = md5(time()) . ".$extensao";
@@ -275,7 +279,7 @@ if (isset($_POST['gravar'])) {
         $grava->bindValue(':subArea', $subArea);
         $grava->bindValue(':preco', $preco);
         $grava->bindValue(':data_prod', $data);
-       
+
         $grava->execute();
         $errorInfo = $grava->errorInfo();
         if ($errorInfo[0] != '00000') {
