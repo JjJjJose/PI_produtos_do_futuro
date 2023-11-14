@@ -3,8 +3,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
     <div class="col-md-3 mb-2 mb-md-0">
-        <a href="#">
-            <img src="s-" alt="">
+        <a href="#" class="d-inline-flex link-body-emphasis text-decoration-none">
+            <svg class="bi" width="40" height="32" role="img" aria-label="logo">
+                <img src="../assets/logo.png" style="width: 40px;"  alt="" srcset="">
+            </svg>
         </a>
     </div>
 
@@ -21,10 +23,6 @@
     </div>
 </header>
 
-
-
-
-
-
+<!--header-->
 
 <!--footer-->

@@ -15,7 +15,9 @@
 </head>
 
 <body class="d-flex align-items-center justify-content-center" style="height: 100vh;">
-    <div class="container bg-secondary">
+   
+
+<div class="container bg-secondary">
 
 
         <form action="index.php" method="post" enctype="multipart/form-data">
