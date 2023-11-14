@@ -192,10 +192,7 @@
         <div class="box">
             <h3>Evolução do Grupo</h3>
             <p>Inicialmente composto por Paulo Eduardo, Bryan Alexandre, José Augusto, João Trizotte, João Scarante e
-                Bruno Eufrasio, nossa equipe sofreu mudanças significativas. Bryan, Bruno e João Scarante não fazem mais
-                parte do grupo. No entanto, mantendo nosso compromisso com a missão, Antony Wippichy e João Gualberto se
-                juntaram ao projeto, trazendo novas perspectivas e habilidades valiosas.</p>
-        </div>
+                Bruno Eufrasio, nossa equipe sofreu mudanças significativas. Apenas sobrando José Augusto e João Trizotte </p>
 
         <div class="box">
             <h3>Nosso Compromisso</h3>

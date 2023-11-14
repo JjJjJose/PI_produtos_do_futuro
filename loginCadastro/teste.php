@@ -3,7 +3,7 @@ session_start();
 if(!isset($_SESSION['login'])){
     header("location: login.php");
 }
-include "../util/config.php";
+include "../config.php";
 $consulta=$conn->prepare('SELECT * FROM `login` WHERE id_log=:id');
 $consulta->bindValue(":id", $_SESSION['login']);
 $consulta->execute();

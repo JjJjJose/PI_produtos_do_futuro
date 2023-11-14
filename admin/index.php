@@ -88,7 +88,7 @@
 
 
 <?php
-include "../util/config.php";
+include "../config.php";
 
 ?>
 

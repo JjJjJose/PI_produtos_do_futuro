@@ -105,7 +105,7 @@
 
 
 <?php
-include "./../../util/config.php";
+include "../../config.php";
 if (isset($_POST['gravar'])) {
     $pw1 = $_POST['password'];
     $pw2 = $_POST['password-2'];

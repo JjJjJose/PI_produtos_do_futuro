@@ -537,7 +537,7 @@
 </body>
 
 <?php
-include "./../../../../util/config.php";
+include "../../../../config.php";
 $errType = false;
 
 

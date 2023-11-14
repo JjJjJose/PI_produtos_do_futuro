@@ -71,7 +71,7 @@ div.message {
 
 
 <?php
-include "../util/config.php";
+include "../config.php";
 $stmt = $conn->prepare('SELECT * FROM `chat`');
 $stmt->execute();
 $data = array();

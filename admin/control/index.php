@@ -133,7 +133,7 @@
         crossorigin="anonymous"></script>
 </body>
 <?php
-include "../../util/config.php";
+include "../PI_produtos_do_futuro/config.php";
 $stmt = $conn->prepare('SELECT * FROM `login`');
 $stmt->execute();
 $data = array();
