@@ -157,6 +157,8 @@ $row = $consulta->fetch();
             <button class="follow-button">Seguir</button>
         </nav>
 
+    
+
         <div class="feed">
 
         </div>

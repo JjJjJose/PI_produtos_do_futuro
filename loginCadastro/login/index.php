@@ -92,7 +92,7 @@ session_destroy();
 
 
 <?php
-include "../PI_produtos_do_futuro/config.php";
+include "../../config.php";
 $errType = false;
 if (isset($_POST['logar'])) {
     $email = $_POST['email'];
