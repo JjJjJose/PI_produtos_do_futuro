@@ -46,7 +46,6 @@
             <div class="row">
                 <?php
                 include "../config.php";
-
                 $stmt = $conn->prepare("SELECT * FROM produtos");
                 $stmt->execute();
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
