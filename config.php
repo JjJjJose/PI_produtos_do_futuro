@@ -1,7 +1,5 @@
 <?php
-// $conn = new PDO('mysql:host=localhost;dbname=u668533246_piratecoder13', 'u668533246_piratecoder13', 'cA8/V=2ch0ue');
-// ^ HOST
-// v LOCAL
+
 $conn = new PDO('mysql:host=localhost;dbname=pi_banco', 'root', '');
 
 
@@ -18,7 +16,6 @@ try {
 $GLOBALS['conn'] = $conn;
 function pdo()
 {
-    // return new PDO('mysql:host=localhost;dbname=u668533246_piratecoder13', 'u668533246_piratecoder13', 'cA8/V=2ch0ue');
     return $GLOBALS['conn'];
 }
 
