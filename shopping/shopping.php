@@ -22,7 +22,7 @@
             <li><a href="#" class="nav-link px-2">Inicio</a></li>
             <li><a href="#" class="nav-link px-2">Serviços</a></li>
             <li><a href="#" class="nav-link px-2">FAQS</a></li>
-            <li><a href="#" class="nav-link px-2">Sobre</a></li>
+            <li><a href="../about/index.php" class="nav-link px-2">Sobre</a></li>
         </ul>
 
         <div class="col-md-3 text-end">
